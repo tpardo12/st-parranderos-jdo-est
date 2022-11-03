@@ -21,24 +21,19 @@ package uniandes.isis2304.parranderos.negocio;
  * 
  * @author Germán Bravo
  */
-public interface VOGustan 
+public interface VOProductos 
 {
-	/* ****************************************************************
-	 * 			Métodos
-	 *****************************************************************/
-	/**
-	 * @return El idBebedor
-	 */
-	public long getIdBebedor();
+	public long getCodigo();
+	public String getNombre();
+	public int getPrecio();
+	public int getCantidad();
+	public String getUnidadmedida();
+	public float getPeso();
+	public float getVolumen();
+	public String getCod_barras();
+	public String getCategoria();
 
-	/**
-	 * @return El idBebida
-	 */
-	public long getIdBebida();
-	
-	/** 
-	 * @return Una cadena con la información básica
-	 */
+	 
 	@Override
 	public String toString();
 	

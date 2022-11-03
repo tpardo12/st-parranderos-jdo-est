@@ -650,6 +650,7 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
         catch( Exception e )
         {
             e.printStackTrace( );
+
         }
     }
 }

@@ -16,37 +16,24 @@
 package uniandes.isis2304.parranderos.negocio;
 
 /**
- * Interfaz para los métodos get de TIPOBEBIDA.
- * Sirve para proteger la información del negocio de posibles manipulaciones desde la interfaz 
- * 
+ * Clase para modelar el concepto BEBIDA del negocio de los Parranderos
+ *
  * @author Germán Bravo
  */
-public interface VOTipoBebida 
+public interface VORol
 {
 	/* ****************************************************************
-	 * 			Métodos
+	 * 			Atributos
 	 *****************************************************************/
 	/**
-	 * @return El id del tipo de bebida
+	 * El identificador ÚNICO de la bebida
 	 */
-	public long getId();
 
-	/**
-	 * @return El nombre del tipo de bebida
-	 */
 	public String getNombre();
-
-	/**
-	 * @return Una cadena de caracteres con la información del tipo de bebida
-	 */
+	public String getDescripcion();
+	
+	
 	@Override
-	public String toString(); 
+	public String toString() ;
 
-	/**
-	 * Define la igualdad dos Tipos de bebida
-	 * @param tb - El tipo de bebida a comparar
-	 * @return true si tienen el mismo identificador y el mismo nombre
-	 */
-	@Override
-	public boolean equals (Object tb); 
 }

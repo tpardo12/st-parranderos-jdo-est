@@ -15,43 +15,27 @@
 
 package uniandes.isis2304.parranderos.negocio;
 
-import java.sql.Timestamp;
-
 /**
- * Interfaz para los métodos get de VISITAN.
- * Sirve para proteger la información del negocio de posibles manipulaciones desde la interfaz 
- * 
+ * Clase para modelar el concepto BEBIDA del negocio de los Parranderos
+ *
  * @author Germán Bravo
  */
-public interface VOVisitan 
+public interface VOSupermercado
 {
 	/* ****************************************************************
-	 * 			Métodos
+	 * 			Atributos
 	 *****************************************************************/
 	/**
-	 * @return El idBebedor
+	 * El identificador ÚNICO de la bebida
 	 */
-	public long getIdBebedor();
+	
+	
+	public long getId_supermercado();
 
-	/**
-	 * @return El idBar
-	 */
-	public long getIdBar();
-
-	/**
-	 * @return La fechaVisita
-	 */
-	public Timestamp getFechaVisita();
-
-	/**
-	 * @return El horario
-	 */
-	public String getHorario();
-
-	/** 
-	 * @return Una cadena con la información básica
-	 */
+	public String getNombre();
+	
+	
 	@Override
-	public String toString();
+	public String toString() ;
 
 }

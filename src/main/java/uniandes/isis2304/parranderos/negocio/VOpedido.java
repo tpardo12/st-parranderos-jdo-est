@@ -16,35 +16,30 @@
 package uniandes.isis2304.parranderos.negocio;
 
 /**
- * Interfaz para los métodos get de SIRVEN.
- * Sirve para proteger la información del negocio de posibles manipulaciones desde la interfaz 
- * 
+ * Clase para modelar el concepto BEBIDA del negocio de los Parranderos
+ *
  * @author Germán Bravo
  */
-public interface VOSirven 
+public interface VOpedido
 {
 	/* ****************************************************************
-	 * 			Métodos
+	 * 			Atributos
 	 *****************************************************************/
 	/**
-	 * @return El idBar
+	 * El identificador ÚNICO de la bebida
 	 */
-	public long getIdBar();
 
-	/**
-	 * @return El idBebida
-	 */
-	public long getIdBebida();
+	public long getId_pedido();
 
-	/**
-	 * @return El horario en que el bar sirve la bebida
-	 */
-	public String getHorario();
+	public long getProducto() ;
+	public long getProveedor();
 
-	/** 
-	 * @return Una cadena con la información básica
-	 */
+	public int getPrecio();
+	public int getCantidad();
+	public String getFecha_entrega();
+
+	public String getFecha_esperada();
+	
 	@Override
 	public String toString();
-
 }

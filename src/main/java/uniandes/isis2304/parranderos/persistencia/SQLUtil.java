@@ -77,23 +77,42 @@ class SQLUtil
 	 */
 	public long [] limpiarParranderos (PersistenceManager pm)
 	{
-        Query qGustan = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaGustan ());          
-        Query qSirven = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaSirven ());
-        Query qVisitan = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaVisitan ());
-        Query qBebida = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaBebida ());
-        Query qTipoBebida = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaTipoBebida ());
-        Query qBebedor = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaBebedor ());
-        Query qBar = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaBar ());
+        Query qBogdega = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaBodega ());          
+        Query qCategoria = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCategoria() );
+        Query qcompra_productos = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCompra_Producto());
+        Query qCompra = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCompra ());
+        Query qEstante = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaEstante ());
+        Query qFactura = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaFactura ());
+        Query qPedido = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaProductos_Promocion() );
+		Query qProductos = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaProducto() );          
+        Query qProductos_promocion = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaProductos_Promocion() );
+        Query qRol = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaRol());
+        Query qPromocion = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaPromocion ());
+        Query qProveedor = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaProveedor() );
+        Query qsucursal = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaSucursal() );
+        Query qsupermercado = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaSupermercado() );
+		Query qUsuario = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaUsuario() );
 
-        long gustanEliminados = (long) qGustan.executeUnique ();
-        long sirvenEliminados = (long) qSirven.executeUnique ();
-        long visitanEliminadas = (long) qVisitan.executeUnique ();
-        long bebidasEliminadas = (long) qBebida.executeUnique ();
-        long tiposBebidaEliminados = (long) qTipoBebida.executeUnique ();
-        long bebedoresEliminados = (long) qBebedor.executeUnique ();
-        long baresEliminados = (long) qBar.executeUnique ();
-        return new long[] {gustanEliminados, sirvenEliminados, visitanEliminadas, bebidasEliminadas, 
-        		tiposBebidaEliminados, bebedoresEliminados, baresEliminados};
+
+        long bodegaElimidados = (long) qBogdega.executeUnique ();
+        long cateogriaEliminados = (long) qCategoria.executeUnique ();
+        long compra_productoEliminados = (long) qcompra_productos.executeUnique ();
+        long compraEliminados = (long) qCompra.executeUnique ();
+        long estanteEliminados = (long) qEstante.executeUnique ();
+        long facturaEliminados = (long) qFactura.executeUnique ();
+        long pedidoEliminados = (long) qPedido.executeUnique ();
+		long productoEliminados = (long) qProductos.executeUnique ();
+        long producto_promocionEliminados = (long) qProductos_promocion.executeUnique ();
+        long rolElimiados = (long) qRol.executeUnique ();
+        long promocionEliminados = (long) qPromocion.executeUnique ();
+        long proveedorEliminados = (long) qProveedor.executeUnique ();
+		long sucursalEliminados = (long) qsucursal.executeUnique ();
+        long supermercadoEliminados = (long) qsupermercado.executeUnique ();
+        long usuarioEliminados = (long) qUsuario.executeUnique ();
+        return new long[] {bodegaElimidados, cateogriaEliminados, compra_productoEliminados, compraEliminados, 
+			estanteEliminados, facturaEliminados, pedidoEliminados, productoEliminados,producto_promocionEliminados, rolElimiados,promocionEliminados,proveedorEliminados,
+			sucursalEliminados,supermercadoEliminados, usuarioEliminados
+		};
 	}
 
 }
